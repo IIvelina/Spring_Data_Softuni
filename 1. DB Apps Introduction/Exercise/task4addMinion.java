@@ -18,7 +18,7 @@ public class task4addMinion {
 
         Properties properties = new Properties();
         properties.setProperty("user", "root");
-        properties.setProperty("password", "iV951222&");
+        properties.setProperty("password", "12345");
 
 
         connection = DriverManager
