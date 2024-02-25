@@ -12,7 +12,7 @@ import static orm.MyConnector.getConnection;
 public class Main {
     public static void main(String[] args) throws SQLException, IllegalAccessException {
 
-        createConnection("root", "iV951222&", "custom_orm");
+        createConnection("root", "12345", "custom_orm");
         Connection connection = getConnection();
 
         EntityManager<User> userEntityManager = new EntityManager<>(connection);
