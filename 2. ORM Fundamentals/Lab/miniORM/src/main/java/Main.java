@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) throws SQLException, IllegalAccessException {
 
 
-        MyConnector.createConnection("root", "iV951222&", "mini_orm");
+        MyConnector.createConnection("root", "12345", "mini_orm");
         Connection connection = MyConnector.getConnection();
 
         EntityManager<User> userEntityManager = new EntityManager<>(connection);
