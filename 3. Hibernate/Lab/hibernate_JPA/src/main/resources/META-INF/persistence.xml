@@ -12,8 +12,8 @@
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
             <!--username -> root -->
             <property name="hibernate.connection.username" value="root"/>
-            <!--password -> iV951222&amp; -->
-            <property name="hibernate.connection.password" value="iV951222&amp;"/>
+            <!--password -> 12345 -->
+            <property name="hibernate.connection.password" value="12345"/>
             <!--каква вариация на MySQL използваме -->
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQL8Dialect"/>
