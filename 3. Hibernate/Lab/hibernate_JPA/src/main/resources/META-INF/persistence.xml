@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="school">
+
+        <properties>
+            <!--connection.url -> къде се намира нашата база -->
+            <!--school -> име на базата -->
+            <!--createDatabaseIfNotExist=true -> ако не съществува, създай я -->
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/school?createDatabaseIfNotExist=true"/>
+            <!--jdbc.Driver -> използваме jdbc driver -->
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <!--username -> root -->
+            <property name="hibernate.connection.username" value="root"/>
+            <!--password -> iV951222&amp; -->
+            <property name="hibernate.connection.password" value="iV951222&amp;"/>
+            <!--каква вариация на MySQL използваме -->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQL8Dialect"/>
+            <!--update -> за да може всеки път да ни обновява таблицата и базата с последните неща, които ние създаваме -->
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <!--show_sql -> служи за дебъг -->
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
