@@ -16,7 +16,7 @@
         root
         </property>
         <property name="hibernate.connection.password">
-            iV951222&amp;
+            12345;
         </property>
         <property name="hbm2ddl.auto">
             update
