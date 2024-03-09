@@ -36,14 +36,7 @@ public class AppController implements CommandLineRunner {
 
         //Get all authors, ordered by the number of their books (descending).
         // Print their first name, last name and book count.
-        //List<Author> authors = this.authorService.findAllAuthorsByCountOfBooks();
-        this.authorService
-                .findAllAuthorsByCountOfBooks()
-                .forEach(a -> {
-                    System.out.printf("%s %s %d%n",
-                            a.getFirstName(),
-                            a.getLastName(),
-                            a.getBooks().size());
-                });
+        List<Author> authors = this.authorService.findAllAuthorsByCountOfBooks();
+
     }
 }
