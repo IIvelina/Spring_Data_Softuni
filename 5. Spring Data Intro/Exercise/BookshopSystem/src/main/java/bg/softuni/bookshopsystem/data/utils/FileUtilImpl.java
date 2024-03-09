@@ -11,7 +11,7 @@ public class FileUtilImpl implements FileUtil{
     @Override
     public String[] readFileContent(String filePath) throws IOException {
 
-        //Path From Content Root   ->   files/categories.txt
+       
         File file = new File(filePath);
 
         BufferedReader reader = new BufferedReader(new FileReader(file));
