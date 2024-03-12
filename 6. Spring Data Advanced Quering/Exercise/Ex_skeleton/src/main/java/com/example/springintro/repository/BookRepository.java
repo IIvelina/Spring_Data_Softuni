@@ -47,6 +47,10 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Query("SELECT COUNT(b) FROM Book AS b WHERE length(b.title) > :length ")
     int countBookWithTitleLongerThan(@Param("length") int number);
 
-
+        @Query("SELECT SUM(b.copies) AS totalCopies " +
+            "FROM Book b " +
+            "JOIN b.author a " +
+            "WHERE a.firstName = :firstName AND a.lastName = :lastName")
+    int countCopiesByAuthor(@Param("firstName") String firstN, @Param("lastName") String lastN);
 }
 
