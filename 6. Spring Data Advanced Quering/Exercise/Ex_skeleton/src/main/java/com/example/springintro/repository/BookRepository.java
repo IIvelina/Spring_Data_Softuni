@@ -57,5 +57,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Transactional
     @Query("UPDATE Book AS b SET b.copies = b.copies + :number WHERE b.releaseDate > :date")
     int addCopiesToBooksAfter(LocalDate date, int number);
+
+       @Transactional
+    int deleteByCopiesLessThan(int number);
 }
 
