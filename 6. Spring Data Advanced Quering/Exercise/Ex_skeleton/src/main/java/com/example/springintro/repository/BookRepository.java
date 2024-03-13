@@ -52,5 +52,10 @@ public interface BookRepository extends JpaRepository<Book, Long> {
             "JOIN b.author a " +
             "WHERE a.firstName = :firstName AND a.lastName = :lastName")
     int countCopiesByAuthor(@Param("firstName") String firstN, @Param("lastName") String lastN);
+
+     @Modifying
+    @Transactional
+    @Query("UPDATE Book AS b SET b.copies = b.copies + :number WHERE b.releaseDate > :date")
+    int addCopiesToBooksAfter(LocalDate date, int number);
 }
 
