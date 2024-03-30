@@ -6,7 +6,6 @@ import softuni.exam.models.entity.Volcanologist;
 
 import java.util.Optional;
 
-// TODO:
 @Repository
 public interface VolcanologistRepository extends JpaRepository<Volcanologist, Long> {
 
