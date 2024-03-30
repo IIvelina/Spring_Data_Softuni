@@ -6,7 +6,6 @@ import softuni.exam.models.entity.Country;
 
 import java.util.Optional;
 
-// TODO:
 @Repository
 public interface CountryRepository extends JpaRepository<Country, Long> {
 
